@@ -1,0 +1,114 @@
+/* base css for common design for support all component */
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.f-great{
+  font-family: 'Great Vibes', cursive;
+}
+
+// universal layout
+html, body{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+p{
+  @extend .fz-0;
+}
+.wrapper{
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+.sidebar{
+  flex-shrink: 0;
+  width: 230px;
+  height: calc(100% - 50px);
+  margin-top: 50px;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: -230px;
+  z-index: 1000001;
+  transition: all .3s;
+  .brand-button{
+    width: inherit !important;
+    position: fixed;
+    top: 0;
+    z-index: 100001;
+    .btn-pull-box{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      left: 100%;
+      cursor: pointer;
+      position: absolute;
+      z-index: 10000001;
+    }
+    a.portfolio{
+      padding-top: 10px !important;
+      padding-bottom: 7px !important;
+    }
+  }
+}
+.mainbody{
+  width: 100%;
+  position: relative;
+  left: 0;
+  transition: all .3s;
+  .content{
+    min-height: 100%;
+  }
+}
+.sidebar.on{
+  left: 0;
+}
+
+// hover menu
+.primary-menu{
+  height: 100%;
+  a{
+    color: #333333;
+    &:hover{
+      background: lighten($pink, 40%);
+      color: $pink;
+    }
+  }
+  .active{
+    background: $pink;
+    color: #ffffff;
+  }
+  ul{
+    min-height: calc(100% - 130px);
+  }
+}
+
+.custom-bar{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 0;
+    border: 1px solid $pink;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 0;
+    border: 1px solid $pink;
+    top: 6px;
+  }
+}
+
+.circle{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  // background-color: lighten($pink, 40%);
+  // box-shadow: 0 0 5px lighten($pink, 40%);
+  // color: $pink;
+  // display: inline-block;
+  // margin: auto;
+  // text-align: center;
+}

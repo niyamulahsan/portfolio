@@ -1,0 +1,12 @@
+.pricing{
+  button.active{
+    background: $pink;
+    color: #ffffff;
+  }
+  .shape{
+    clip-path: circle(75% at 61% 0);
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background: linear-gradient(to right, lighten($red, 5%) 30%, $pink);
+  }
+}

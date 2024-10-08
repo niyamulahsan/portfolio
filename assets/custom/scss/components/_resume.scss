@@ -1,0 +1,19 @@
+.my-resume{
+  .resume-block-style{
+    border-left: 1px solid #d4d9df;
+    padding-left: 36px;
+    li{
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: red;
+        left: -55px;
+        top: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+}

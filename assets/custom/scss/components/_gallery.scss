@@ -1,0 +1,112 @@
+// gallery image compare
+.gallery{
+  .img-compare{
+    position: relative;
+    overflow: hidden;
+    .images{
+      display: flex;
+      .back-img{
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+        img{
+          opacity: 0;
+          width: 100%;
+        }
+      }
+      .slide{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+    .handler{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      input[type=range]{
+        appearance: none;
+        width: inherit;
+        height: inherit;
+        background: none;
+        &::-moz-range-thumb{
+          height: inherit;
+          width: 2px;
+          border: none;
+          background: none;
+        }
+        &::-webkit-slider-thumb{
+          appearance: none;
+          width: 2px;
+          height: calc(100% - 1px);
+          background: none;
+        }
+      }
+      .dragline{
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        background: none;
+        pointer-events: none;
+        &:before, &:after{
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: calc((100% / 2) - 15px);
+          background: orange;
+        }
+        &:before{
+          top: 0;
+        }
+        &:after{
+          bottom: 0;
+        }
+        span{
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          border: 2px solid orange;
+          border-radius: 50%;
+          top: 50%;
+          bottom: 50%;
+          transform: translate(-50%, -50%);
+          &:before, &:after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &::before{
+            border-right: 7px solid orange;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            left: calc(50% - 9px);
+          }
+          &::after{
+            border-left: 7px solid orange;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            right: calc(50% - 9px);
+          }
+        }
+      }
+    }
+  }
+  ul{
+    li a{
+      color: #333;
+    }
+    li a.active{
+      background: transparent !important;
+      color: darken($pink, 10%) !important;
+    }
+  }
+}

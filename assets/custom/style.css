@@ -1,0 +1,659 @@
+/* responsive variables */
+/* colors variable */
+/* font size variable */
+/* base css for common design for support all component */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.f-great {
+  font-family: 'Great Vibes', cursive;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 230px;
+  height: calc(100% - 50px);
+  margin-top: 50px;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: -230px;
+  z-index: 1000001;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.sidebar .brand-button {
+  width: inherit !important;
+  position: fixed;
+  top: 0;
+  z-index: 100001;
+}
+
+.sidebar .brand-button .btn-pull-box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  left: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10000001;
+}
+
+.sidebar .brand-button a.portfolio {
+  padding-top: 10px !important;
+  padding-bottom: 7px !important;
+}
+
+.mainbody {
+  width: 100%;
+  position: relative;
+  left: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.mainbody .content {
+  min-height: 100%;
+}
+
+.sidebar.on {
+  left: 0;
+}
+
+.primary-menu {
+  height: 100%;
+}
+
+.primary-menu a {
+  color: #333333;
+}
+
+.primary-menu a:hover {
+  background: #ffcce2;
+  color: #FF006E;
+}
+
+.primary-menu .active {
+  background: #FF006E;
+  color: #ffffff;
+}
+
+.primary-menu ul {
+  min-height: calc(100% - 130px);
+}
+
+.custom-bar {
+  position: relative;
+}
+
+.custom-bar::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 0;
+  border: 1px solid #FF006E;
+}
+
+.custom-bar::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 0;
+  border: 1px solid #FF006E;
+  top: 6px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+/* breakpoint for responsive */
+/* background color */
+.bg-pink {
+  background: #FF006E;
+}
+
+.bg-blue {
+  background: #3A86FF;
+}
+
+.bg-green {
+  background: #1B4332;
+}
+
+.bg-red {
+  background: #F94144;
+}
+
+.bg-yellow {
+  background: #F9C74F;
+}
+
+.bg-violet {
+  background: #8338EC;
+}
+
+.bg-darkgray {
+  background: #212529;
+}
+
+.bg-silver {
+  background: #ecf0f1;
+}
+
+/* text color */
+.text-pink {
+  color: #ff338b;
+}
+
+.text-shadow-pink {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #ff66a8);
+          filter: drop-shadow(0 0.5rem 0.5rem #ff66a8);
+}
+
+.text-blue {
+  color: #6da5ff;
+}
+
+.text-shadow-blue {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #a0c5ff);
+          filter: drop-shadow(0 0.5rem 0.5rem #a0c5ff);
+}
+
+.text-green {
+  color: #2a674d;
+}
+
+.text-shadow-green {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #388c68);
+          filter: drop-shadow(0 0.5rem 0.5rem #388c68);
+}
+
+.text-red {
+  color: #fb7275;
+}
+
+.text-shadow-red {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #fca4a5);
+          filter: drop-shadow(0 0.5rem 0.5rem #fca4a5);
+}
+
+.text-yellow {
+  color: #fbd780;
+}
+
+.text-shadow-yellow {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #fce6b2);
+          filter: drop-shadow(0 0.5rem 0.5rem #fce6b2);
+}
+
+.text-violet {
+  color: #a067f0;
+}
+
+.text-shadow-violet {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #bd95f5);
+          filter: drop-shadow(0 0.5rem 0.5rem #bd95f5);
+}
+
+.text-darkgray {
+  color: #383f45;
+}
+
+.text-shadow-darkgray {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem #4e5862);
+          filter: drop-shadow(0 0.5rem 0.5rem #4e5862);
+}
+
+.text-silver {
+  color: white;
+}
+
+.text-shadow-silver {
+  -webkit-filter: drop-shadow(0 0.5rem 0.5rem white);
+          filter: drop-shadow(0 0.5rem 0.5rem white);
+}
+
+/* custom button bg color and hover */
+.btn-pink {
+  background: #FF006E;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background: #b3004d;
+  color: #fff;
+}
+
+.shadow-pink {
+  -webkit-box-shadow: 0 0.3rem 1rem #ff66a8;
+          box-shadow: 0 0.3rem 1rem #ff66a8;
+}
+
+.btn-blue {
+  background: #3A86FF;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: #005bed;
+  color: #fff;
+}
+
+.shadow-blue {
+  -webkit-box-shadow: 0 0.3rem 1rem #a0c5ff;
+          box-shadow: 0 0.3rem 1rem #a0c5ff;
+}
+
+.btn-green {
+  background: #1B4332;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background: #050c09;
+  color: #fff;
+}
+
+.shadow-green {
+  -webkit-box-shadow: 0 0.3rem 1rem #388c68;
+          box-shadow: 0 0.3rem 1rem #388c68;
+}
+
+.btn-red {
+  background: #F94144;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #e6070b;
+  color: #fff;
+}
+
+.shadow-red {
+  -webkit-box-shadow: 0 0.3rem 1rem #fca4a5;
+          box-shadow: 0 0.3rem 1rem #fca4a5;
+}
+
+.btn-yellow {
+  background: #F9C74F;
+  color: #000;
+}
+
+.btn-yellow:hover {
+  background: #f3ae08;
+  color: #000;
+}
+
+.shadow-yellow {
+  -webkit-box-shadow: 0 0.3rem 1rem #fce6b2;
+          box-shadow: 0 0.3rem 1rem #fce6b2;
+}
+
+.btn-violet {
+  background: #8338EC;
+  color: #fff;
+}
+
+.btn-violet:hover {
+  background: #5d13c5;
+  color: #fff;
+}
+
+.shadow-violet {
+  -webkit-box-shadow: 0 0.3rem 1rem #bd95f5;
+          box-shadow: 0 0.3rem 1rem #bd95f5;
+}
+
+.btn-darkgray {
+  background: #212529;
+  color: #fff;
+}
+
+.btn-darkgray:hover {
+  background: black;
+  color: #fff;
+}
+
+.shadow-darkgray {
+  -webkit-box-shadow: 0 0.3rem 1rem #4e5862;
+          box-shadow: 0 0.3rem 1rem #4e5862;
+}
+
+.btn-silver {
+  background: #ecf0f1;
+  color: #fff;
+}
+
+.btn-silver:hover {
+  background: #c0cdd1;
+  color: #fff;
+}
+
+.shadow-silver {
+  -webkit-box-shadow: 0 0.3rem 1rem white;
+          box-shadow: 0 0.3rem 1rem white;
+}
+
+/* outline button */
+.btn-outline-pink {
+  border: 1px solid #FF006E;
+  color: #FF006E;
+}
+
+.btn-outline-pink:hover {
+  border-color: #cc0058;
+  background: #FF006E;
+  color: #fff;
+}
+
+.btn-outline-blue {
+  border: 1px solid #3A86FF;
+  color: #3A86FF;
+}
+
+.btn-outline-blue:hover {
+  border-color: #0767ff;
+  background: #3A86FF;
+  color: #fff;
+}
+
+.btn-outline-green {
+  border: 1px solid #1B4332;
+  color: #1B4332;
+}
+
+.btn-outline-green:hover {
+  border-color: #0c1f17;
+  background: #1B4332;
+  color: #fff;
+}
+
+.btn-outline-red {
+  border: 1px solid #F94144;
+  color: #F94144;
+}
+
+.btn-outline-red:hover {
+  border-color: #f71013;
+  background: #F94144;
+  color: #fff;
+}
+
+.btn-outline-yellow {
+  border: 1px solid #F9C74F;
+  color: #F9C74F;
+}
+
+.btn-outline-yellow:hover {
+  border-color: #f7b71e;
+  background: #F9C74F;
+  color: #000;
+}
+
+.btn-outline-violet {
+  border: 1px solid #8338EC;
+  color: #8338EC;
+}
+
+.btn-outline-violet:hover {
+  border-color: #6815dc;
+  background: #8338EC;
+  color: #fff;
+}
+
+.btn-outline-darkgray {
+  border: 1px solid #212529;
+  color: #212529;
+}
+
+.btn-outline-darkgray:hover {
+  border-color: #0a0c0d;
+  background: #212529;
+  color: #fff;
+}
+
+.btn-outline-silver {
+  border: 1px solid #ecf0f1;
+  color: #ecf0f1;
+}
+
+.btn-outline-silver:hover {
+  border-color: #cfd9db;
+  background: #ecf0f1;
+  color: #fff;
+}
+
+/* font size for all aspect */
+.fz-0, p {
+  font-size: 0.75rem;
+}
+
+.fz-1 {
+  font-size: 0.85rem;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner .img-background {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(90%, black));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), black 90%);
+}
+
+.banner .img-background img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.banner .caption img {
+  width: 200px;
+}
+
+.aboutme .details .circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #ffcce2;
+  -webkit-box-shadow: 0 0 5px #ffcce2;
+          box-shadow: 0 0 5px #ffcce2;
+  color: #FF006E;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+
+.my-resume .resume-block-style {
+  border-left: 1px solid #d4d9df;
+  padding-left: 36px;
+}
+
+.my-resume .resume-block-style li {
+  position: relative;
+}
+
+.my-resume .resume-block-style li::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: red;
+  left: -55px;
+  top: 0;
+  border-radius: 50%;
+}
+
+.gallery .img-compare {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .img-compare .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery .img-compare .images .back-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.gallery .img-compare .images .back-img img {
+  opacity: 0;
+  width: 100%;
+}
+
+.gallery .img-compare .images .slide {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.gallery .img-compare .handler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .img-compare .handler input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: inherit;
+  height: inherit;
+  background: none;
+}
+
+.gallery .img-compare .handler input[type=range]::-moz-range-thumb {
+  height: inherit;
+  width: 2px;
+  border: none;
+  background: none;
+}
+
+.gallery .img-compare .handler input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 2px;
+  height: calc(100% - 1px);
+  background: none;
+}
+
+.gallery .img-compare .handler .dragline {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  background: none;
+  pointer-events: none;
+}
+
+.gallery .img-compare .handler .dragline:before, .gallery .img-compare .handler .dragline:after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: calc((100% / 2) - 15px);
+  background: orange;
+}
+
+.gallery .img-compare .handler .dragline:before {
+  top: 0;
+}
+
+.gallery .img-compare .handler .dragline:after {
+  bottom: 0;
+}
+
+.gallery .img-compare .handler .dragline span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gallery .img-compare .handler .dragline span:before, .gallery .img-compare .handler .dragline span:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.gallery .img-compare .handler .dragline span::before {
+  border-right: 7px solid orange;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  left: calc(50% - 9px);
+}
+
+.gallery .img-compare .handler .dragline span::after {
+  border-left: 7px solid orange;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  right: calc(50% - 9px);
+}
+
+.gallery ul li a {
+  color: #333;
+}
+
+.gallery ul li a.active {
+  background: transparent !important;
+  color: #cc0058 !important;
+}
+
+.pricing button.active {
+  background: #FF006E;
+  color: #ffffff;
+}
+
+.pricing .shape {
+  -webkit-clip-path: circle(75% at 61% 0);
+          clip-path: circle(75% at 61% 0);
+  padding-top: 20%;
+  padding-bottom: 20%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #fa5a5c), to(#FF006E));
+  background: linear-gradient(to right, #fa5a5c 30%, #FF006E);
+}
